@@ -1,8 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    int year;
-    scanf("%d",&year);
-    year=year%100;
-    printf("%.2d",year);
+    int years;
+    scanf("%d",&years);
+    years=years%100;
+    printf("%02d",years);
 }
