@@ -1,17 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,sum=0;
+    int n,i,f=0;
     scanf("%d",&n);
     for(i=1;i<=n;i++)
     {
-        
-    if(n%i==0)
+        if(n%i==0)
         {
-            sum=sum+1;
+            f++;
         }
     }
-    if(sum==2)
+    if(f==2)
     {
         printf("Prime");
     }
@@ -19,5 +18,4 @@ int main()
     {
         printf("Not Prime");
     }
-    
 }
