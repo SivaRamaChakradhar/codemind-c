@@ -1,60 +1,58 @@
 #include<stdio.h>
-int main(){
-    int t,n,b,i,j,k,l,m,s,c=0,d=0,h;
-    scanf("%d",&t);
-    for(i=1;i<=t;i++){
-        scanf("%d",&n);
-        b=n;
-        for(j=n;j<=10000;j++)
-        {
-            c=0;
-            for(k=2;k<j;k++)
-            {
-                if(j%k==0)
-                {
-                    c++;
-                    break;
-                }
-            }
-            if(c==0)
-            {
-                h=j;
-                break;
-            }
-        }
-        for(l=n;l>0;l--)
-        {
-            d=0;
-            for(m=2;m<l;m++)
-            {
-                if(l%m==0)
-                {
-                    d++;
-                    break;
-                }
-            }
-            if(d==0)
-            {
-                s=l;
-                break;
-            }
-        }
-        if(n-s<=h-n)
-        {
-            printf("%d
-",s);
-        }
-        else if(b==2)
-        {
-           printf("3");
-        }
-       else if(b==1)
-       {
-           printf("2");
-       }
-        else{
-            printf("%d
-",h);
-        }
-    }
+int main()
+{
+	int n,i,j,k,t,c=0,bp,np;
+	scanf("%d",&t);
+	for(k=1;k<=t;k++)
+	{
+    	scanf("%d",&n);
+    	int p=n;
+    	for(i=n;;i++)
+    	{
+    		c=0;
+    		for(j=1;j<=i;j++)
+    		{
+    			if(i%j==0)
+    			{
+    				c++;
+    			}
+    		}
+    		if(c == 2)
+    		{
+    			np=i;
+    			break;
+    		}
+    	}
+    	for(i=n;;i--)
+    	{
+    		c=0;
+    		for(j=1;j<=i;j++)
+    		{
+    			if(i%j==0)
+    			{
+    				c++;
+    			}
+    		}
+    		if(c == 2)
+    		{
+    			bp=i;
+    			break;
+    		}
+    	}
+    	if(np-n<n-bp)
+    	{
+    		printf("%d
+",np);
+    	}
+    	else if(np-n>n-bp)
+    	{
+    		printf("%d
+",bp);
+    	}
+    	else
+    	{
+    		printf("%d
+",bp);
+    	}
+	}
 }
