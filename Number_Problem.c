@@ -1,49 +1,17 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int a,b,g;
+    int a,b,c,d;
     scanf("%d%d",&a,&b);
-    if(b>a){
-    int c=b-a;
-    if(c==0)
+    c=abs(a-b);
+    d=c/10;
+    if(c%10 == 0)
     {
-        printf("0");
-    }else if(c<=10)
-    {
-        printf("1");
-    }else if(c%10!=0)
-    {
-        int d=c/10;
-        printf("%d",++d);
-    }else {
-        if(c%10==0)
-         g=c/10;
-        printf("%d",g);
+        printf("%d",d);
     }
-        
-    }
-else {
-            int c=a-b;
-    if(c==0)
+    else
     {
-        printf("0");
+        printf("%d",d+1);
     }
-    else if(c<=10)
-    {
-        printf("1");
-    }
-    else if(c%10!=0)
-       {
-        int d=c/10;
-        printf("%d",++d);
-            
-        }
-    else 
-        {
-            if(c%10==0)
-             g=c/10;
-            printf("%d",g);
-        }
-        }
-    
 }
