@@ -1,35 +1,26 @@
 #include<stdio.h>
+int self(int);
 int main()
 {
-    int a,b,i,c,d;
+    int a,b,flag=0,r,i;
     scanf("%d%d",&a,&b);
     for(i=a;i<=b;i++)
     {
-        c = i;
-        d = 1;
-        if(i>0)
+        flag=0;
+        int t=i;
+        while(t != 0)
         {
-            while(c>0 && d==1)
+            r=t%10;
+            if(r == 0 || i%r != 0)
             {
-                if(((c%10) == 0) || (i%(c%10) != 0))   
-                {
-                    d=0;
-                }
-                else
-                {
-                    c=c/10;
-                }
+                flag=1;
+
             }
-        } 
-        else
-        {
-            d=0;
+            t/=10;
         }
-        if(d==1)
+        if(flag == 0)
         {
             printf("%d ",i);
         }
     }
-    return 0;
-    
 }
